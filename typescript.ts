@@ -30,3 +30,42 @@ console.log(nombre, edad, esEstudiante)
 
 
 
+// Ejercicio 2
+// Declarar una función que reciba dos números como parámetros y retorne su suma.
+// Asegurar que los parámetros y el valor de retorno sean de tipo number.
+// Llamar a la función e imprimir el resultado.
+// Realizar otra función que reste dos números.
+// Realizar otra función que multiplique dos números.
+function suma(a: number, b: number): number {
+    return a + b;
+}
+console.log("Suma:", suma(10,3))
+
+
+
+// Ejercicio 3
+// Crear un array de números llamado "numeros" y agregar algunos valores.
+// Usa un bucle para imprimir cada número multiplicado por 2 (usando forEach())
+let numeros: number[] = [13, 16, 12, 89];
+numeros.forEach(num => {
+    console.log(num);
+});
+
+
+
+// Ejercicio 4
+// Declarar una interfaz "Persona" con las propiedades: nombre (string), edad (number), y esEstudiante (boolean).
+// Crear tres objetos que sigan la estructura de la interfaz.
+// Imprimir en consola.
+interface Persona {
+    nombre: string;
+    edad: number;
+    esEsttudiante: boolean;
+}
+let persona: Persona = {nombre:"Miranda",edad:22,esEsttudiante:true}
+let persona2: Persona = {nombre:"Candela",edad:23,esEsttudiante:true}
+let persona3: Persona = {nombre:"Milagros",edad:23,esEsttudiante:false}
+
+
+
+
