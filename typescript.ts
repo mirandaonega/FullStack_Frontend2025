@@ -69,3 +69,76 @@ let persona3: Persona = {nombre:"Milagros",edad:23,esEsttudiante:false}
 
 
 
+// Ejercicio 5
+// Declara una variable que pueda ser de tipo string o number.
+// Asigna un valor string y luego cambia su valor a number.
+// Imprimir en consola ambos casos.
+let variable: string | number;
+variable = "hola";
+console.log(variable)
+variable = 1;
+console.log(variable) 
+
+
+
+// Ejercicio 6
+// Definir una interfaz "Producto" con propiedades: nombre (string), precio (number), y enStock (boolean).
+// Crear un array de "productos" con seis objetos que sigan la interfaz.
+// Crear una función que reciba el array y retorne los productos en stock (sólo en stock). 
+// Crear otra función que reciba el array y retorne los productos sin stock (sólo sin stock). 
+// Se puede usar método filter() para esto. https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/filter 
+interface Producto {
+    nombre: string;
+    precio: number;
+    enStock: boolean;
+}
+const productos: Producto[] = [
+  { nombre: "Collar", precio: 10000, enStock: true },
+  { nombre: "Anillo", precio: 2500, enStock: false },
+  { nombre: "Pulsera", precio: 5000, enStock: true },
+  { nombre: "Aritos", precio: 1500, enStock: false },
+  { nombre: "Hebilla", precio: 3200, enStock: true },
+  { nombre: "Broche", precio: 3500, enStock: false }
+];
+function obtenerEnStock(lista: Producto[]): Producto[] {
+  return lista.filter(producto => producto.enStock);
+}
+function obtenerSinStock(lista: Producto[]): Producto[] {
+  return lista.filter(producto => !producto.enStock);
+}
+console.log("Productos en stock:", obtenerEnStock(productos));
+console.log("Productos sin stock:", obtenerSinStock(productos));
+
+
+
+// Ejercicio 7
+// Definir una interfaz "Cliente" con 4 propiedades a elección (por ahora solamente tipos string, booleanos y numbers).
+// Crear un array de "clientes" con seis objetos que sigan la interfaz.
+// Crear una función que reciba el array y retorne los clientes que cumplan una condición (segun el booleano que hayamos creado). 
+// Crear otra función que reciba el array y retorne los clientes que cumplan la condición inversa al punto de arriba (mismo booleano que hayamos elegido). 
+// Se puede usar método filter() para esto. https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/filter 
+interface Cliente {
+    nombre: string;
+    dni: number;
+    ciudad: string;
+    esMinorista: boolean;
+}
+const clientes: Cliente[] = [
+  { nombre: "Morena Peréz", dni: 44631428, ciudad: "Rosario", esMinorista: true },
+  { nombre: "Gimena Ramirez", dni: 39456753, ciudad: "San Lorenzo", esMinorista: true },
+  { nombre: "Martina Gonzalés", dni: 42789951, ciudad: "Rosario", esMinorista: false },
+  { nombre: "Agustina Díaz", dni: 46789123, ciudad: "CABA", esMinorista: true },
+  { nombre: "Candela Alfonso", dni: 35789741, ciudad: "Rosario", esMinorista: true },
+  { nombre: "María Clara Robles", dni: 45612378, ciudad: "Santa Fe", esMinorista: false },
+];
+function obtenerEsMinorista(lista: Cliente[]): Cliente[] {
+  return lista.filter(cliente => cliente.esMinorista);
+}
+function obtenerNoEsMinorista(lista: Producto[]): Producto[] {
+  return lista.filter(cliente => !cliente.esMinorista);
+}
+console.log("Clientes minoristas:", obtenerEsMinorista(clientes));
+console.log("Clientes mayoristas:", obtenerNoEsMinorista(clientes));
+
+
+
