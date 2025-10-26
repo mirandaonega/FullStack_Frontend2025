@@ -1,0 +1,11 @@
+<div class="container-principal">
+  <div class="container-entradas" *ngFor="let entrada of entradas">
+    <h3>{{ entrada.Pelicula }}</h3>
+    <p>Fecha: {{ entrada.fecha | date:'shortDate' }}</p>
+    <p>Hora: {{ entrada.hora }}</p>
+    <p>Sala: {{ entrada.sala }}</p>
+    <p>Asiento: {{ entrada.asiento }}</p>
+    <p>Precio: {{ entrada.precio | currency }}</p>
+    <hr>
+  </div>
+</div>
