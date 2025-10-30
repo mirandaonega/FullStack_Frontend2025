@@ -1,19 +1,24 @@
 import { Component } from '@angular/core';
+import { OnInit } from '@angular/core';
+import { MovieService,  Movie } from '../movie.service';
 
+/*
 interface Movie {
   title: string;
   year: number;
   description: string;
 }
+*/
 
 @Component({
   selector: 'app-movie-list',
   templateUrl: './movie-list.component.html',
   styleUrls: ['./movie-list.component.css']
 })
-export class MovieListComponent {
-selectedMovie: string = '';
-
+export class MovieListComponent implements OnInit{ 
+  Movies: Movie[] = [];
+  selectedMovie: string | null = null;
+/*
 movies: Movie[] = [
   { title: 'Taylor Swift: The Eras Tour', year: 2024, description: 'A concert film capturing the magic of Taylor Swift\'s Eras Tour.' },
   { title: 'Inception', year: 2010, description: 'A mind-bending thriller about dreams within dreams.' },
@@ -26,14 +31,14 @@ movies: Movie[] = [
   { title: 'Star Wars: Episode IV - A New Hope', year: 1977, description: 'The original Star Wars film that started it all.' },
   { title: 'Jurassic Park', year: 1993, description: 'Dinosaurs are brought back to life in a theme park with disastrous results.' }
 ];
+*/
+constructor(private movieService: MovieService) {}
+
+ngOnInit(): void {
+  this.Movies = this.movieService.getMovies();
+}
 
 onMovieSelected(movieTitle: string): void {
   this.selectedMovie = movieTitle;
   }
 }
-
-/*Archivo TS (movie-list.component.ts):
-
-Declarar una lista de 10 objetos movies, donde cada objeto tenga las propiedades title, year, y description.
-Crear una variable selectedMovie para almacenar la película seleccionada.
-Crear un método onMovieSelected(movieTitle: string) que asigne el valor recibido a la variable selectedMovie.*/

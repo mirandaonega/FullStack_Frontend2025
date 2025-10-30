@@ -15,7 +15,3 @@ selectMovie(): void {
 }
 
 }
-
-/*Declarar una propiedad @Input() llamada movie de tipo objeto para recibir los datos de cada película.
-Declarar un evento @Output() llamado movieSelected utilizando EventEmitter<string>.
-Crear un método selectMovie() que emita el evento movieSelected con el título de la película (this.movie.title).*/ 
