@@ -1,1 +1,69 @@
-/* You can add global styles to this file, and also import other style files */
+/* ================================================= */
+/*             Estilos Globales de MoviesApp         */
+/* ================================================= */
+
+/* 1. RESET BÁSICO Y BOX-MODEL */
+/* Esto asegura que el padding y el borde se incluyan en el ancho/alto total */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. DEFINICIÓN DE VARIABLES CSS (Temas y Tipografía) */
+:root {
+  /* Colores Principales (inspirados en plataformas de streaming) */
+  --color-primary: #e50914; /* Rojo vibrante para énfasis */
+  --color-secondary: #0077ff; /* Azul para acciones secundarias/enlaces */
+  --color-dark-bg: #141414; /* Fondo principal muy oscuro */
+  --color-light-bg: #222222; /* Fondo de elementos (tarjetas, contenedores) */
+  --color-text-light: #ffffff;
+  --color-text-dimmed: #aaaaaa; /* Texto atenuado para descripciones */
+
+  /* Tipografía */
+  --font-family-sans: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-size-base: 16px;
+}
+
+/* 3. ESTILOS BASE DEL CUERPO (BODY) */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-dark-bg);
+  color: var(--color-text-light); /* Color de texto predeterminado claro */
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-base);
+  line-height: 1.5; /* Altura de línea para mejor legibilidad */
+}
+
+/* 4. ESTILOS DE ENLACES Y BOTONES BASE */
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #ff3333; /* Un rojo un poco más brillante al pasar el ratón */
+}
+
+/* 5. Estilos de Encabezados (Opcional - ajusta según tus necesidades) */
+h1, h2, h3 {
+    color: var(--color-text-light);
+    line-height: 1.2;
+    margin-top: 0.5em;
+    margin-bottom: 0.8em;
+}
+
+h1 { font-size: 2.5em; }
+h2 { font-size: 2em; }
+h3 { font-size: 1.5em; }
+
+/* 6. Utilidad para centrar el contenido principal */
+/* Puedes aplicar esta clase a un div contenedor dentro de tu app.component.html */
+.container {
+    max-width: 1200px; /* Ancho máximo estándar para el contenido */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px; /* Padding a los lados para pantallas más pequeñas */
+}

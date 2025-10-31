@@ -1,7 +1,17 @@
 <div class="container-principal">
+  <div class="titulo-container">
+    <h2>Seleccione la pelicula que desea comprar</h2>
+    <hr>
+  </div>
+  
   <div class="container-movies" *ngFor="let movie of Movies">
     <app-movie-item [movie]="movie" (movieSelected)="onMovieSelected($event)"></app-movie-item>
+  </div>
+</div>
+<div class="container-resultado">
+  <div class="resultado">
+    <h2>Pelicula seleccionada</h2>
     <p>{{selectedMovie}}</p>
-
+    <button (click)="comprarEntrada()"> Comprar entradas</button>
   </div>
 </div>

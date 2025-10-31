@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class MensajeInicialComponent {
 
 titulo: string = 'Bienvenido/a a MoviesApp';
-mensaje: string = "Acá se podrán ver pelis!";
+mensaje: string = "Explora nuestra cartelera y descubre las últimas películas disponibles. ¡Disfruta de la mejor experiencia cinematográfica!";
 mensajeVisible: boolean = true;
 
 cerrarMensaje() {

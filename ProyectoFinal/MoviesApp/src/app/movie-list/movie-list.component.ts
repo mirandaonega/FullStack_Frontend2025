@@ -41,4 +41,8 @@ ngOnInit(): void {
 onMovieSelected(movieTitle: string): void {
   this.selectedMovie = movieTitle;
   }
+
+comprarEntrada(){
+  alert("Seccion en desarrollo")
+}
 }

@@ -1,0 +1,62 @@
+/* ================================================= */
+/* src/app/entradas/entradas.component.css           */
+/* Usando estructura de tabla HTML nativa             */
+/* ================================================= */
+
+/* 1. Contenedor y Título (igual que antes) */
+.container-principal {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: var(--color-light-bg);
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.container-principal h2 {
+    /* Estilos del título */
+    text-align: center;
+    color: var(--color-primary);
+    border-bottom: 2px solid var(--color-primary);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* 2. Estilo de la Tabla */
+table {
+  width: 100%;
+  border-collapse: collapse; /* Elimina el doble borde */
+}
+
+/* Encabezados de Columna */
+thead th {
+  background-color: #333; /* Fondo para el encabezado */
+  color: var(--color-text-light);
+  font-weight: bold;
+  padding: 15px 10px;
+  text-align: left;
+  border-bottom: 2px solid var(--color-primary);
+}
+
+/* Filas de Datos */
+tbody tr {
+  border-bottom: 1px solid #444; /* Separador de filas */
+  transition: background-color 0.3s ease;
+}
+
+/* Efecto de Hover en las Filas */
+tbody tr:hover {
+  background-color: #2a2a2a;
+}
+
+/* Celdas de Datos */
+tbody td {
+  padding: 15px 10px;
+  color: var(--color-text-light);
+  font-size: 0.95em;
+}
+
+/* Estilo para la última fila */
+tbody tr:last-child {
+  border-bottom: none;
+}

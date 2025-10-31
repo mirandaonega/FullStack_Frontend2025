@@ -1,0 +1,69 @@
+/* ================================================= */
+/* src/app/movie-list/movie-list.component.css       */
+/* ================================================= */
+
+/* 1. Contenedor de la lista de películas (TU .container-principal) */
+.container-principal {
+  display: flex; /* Habilitamos Flexbox */
+  flex-wrap: wrap; /* Permitimos que las tarjetas salten de línea */
+  justify-content: space-around; /* Espacio uniforme entre las tarjetas */
+  gap: 30px; /* Espacio entre las filas y columnas */
+  padding: 40px 0; 
+}
+
+
+.titulo-container{
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  color: var(--color-primary);
+  margin-top: 20px;
+  width: 100%;
+}
+
+hr{
+  border-top: 2px solid var(--color-primary); 
+  margin-top: 5px; 
+  margin-bottom: 20px; 
+  width: 100%;
+}
+/* 2. Estilo del CONTENEDOR INDIVIDUAL (TU .container-movies) */
+/* Este es el div que envuelve a la tarjeta */
+.container-movies {
+  /* Le damos el ancho fijo al contenedor que se envuelve */
+  width: 280px; 
+  /* Esto asegura que la tarjeta ocupe todo el espacio del contenedor */
+  display: flex;
+  flex-direction: column; 
+}
+
+.container-resultado {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  border: 5px solid var(--color-primary);
+  border-radius: 5px;
+}
+
+.resultado {
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  color: var(--color-primary);
+  width: 100%;
+}
+
+button {
+  width: 35%;
+  background-color: var(--color-primary); 
+  color: var(--color-text-light);
+  border: none;
+  border-radius: 4px;
+  padding: 10px 15px;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}

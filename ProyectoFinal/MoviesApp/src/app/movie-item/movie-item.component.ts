@@ -13,5 +13,7 @@ export class MovieItemComponent {
 selectMovie(): void {
   this.movieSelected.emit(this.movie.title);
 }
-
+alerta(){
+  alert("La pelicula ha sido seleccionada. Por favor, continue bajando para completar la compra.");
+}
 }

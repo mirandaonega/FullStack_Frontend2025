@@ -3,6 +3,6 @@
         <h2>{{movie.title}}</h2>
         <h3>{{movie.year}}</h3>
         <p *ngIf="movie.description">{{movie.description}}</p>
-        <button (click)="selectMovie()">Seleccionar</button>
+        <button (click)="selectMovie()" (click)="alerta()">Seleccionar</button>
     </div>
 </div>
